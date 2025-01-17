@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Listings</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="jobs.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="container mt-3">
+      <nav class="d-flex justify-content-between align-items-center mb-4">
+        <a href="index.html" class="btn btn-outline-primary">
+          <i class="bi bi-house-door me-2"></i>
+          Back to Home
+        </a>
+        <h4 class="m-0">Job Listings</h4>
+      </nav>
+    </div>
+
+    <main>
+      <!-- Jobs Search Section -->
+      <section class="jobs-search-section py-4">
+        <div class="container">
+          <div class="text-center">
+            <h1 class="jobs-count mb-3">
+                Find your dream job from thousands of listings
+            </h1>
+
+            <div class="search-container">
+              <form id="searchForm" class="search-bar">
+                <div class="search-input-group position-relative">
+                  <i class="bi bi-briefcase"></i>
+                  <input
+                    type="text"
+                    id="industry-input"
+                    class="form-control"
+                    placeholder="Select job category or title"
+                    autocomplete="off"
+                  />
+                  <div id="job-dropdown" class="dropdown-menu w-100">
+                    <!-- Job options will be populated here -->
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="search-input-group">
+                  <i class="bi bi-search"></i>
+                  <input
+                    type="text"
+                    id="keywordFilter"
+                    class="form-control"
+                    placeholder="Skills, titles, or companies"
+                  />
+                </div>
+                <button type="submit" id="searchBtn" class="search-button">
+                  <i class="bi bi-search me-2"></i>Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search Results Section -->
+      <section class="search-results-section py-4">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="search-result-count text-muted">Loading jobs...</div>
+            <div class="view-options">
+              <button class="view-btn list-view active" title="List View">
+                <i class="bi bi-list"></i>
+              </button>
+              <button class="view-btn grid-view" title="Grid View">
+                <i class="bi bi-grid"></i>
+              </button>
+            </div>
+          </div>
+          <div id="jobListings" class="job-cards">
+            <!-- Job listings will be populated here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jobs.js"></script>
+  </body>
+</html>
